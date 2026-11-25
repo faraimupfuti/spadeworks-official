@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spadeworks Automation | Every Finance Task. Automated.</title>
+  <meta name="description" content="Custom software bots for your finance and accounting team. Faster. Cheaper. Sharper. Yours. Pay once, own the source code forever.">
+  <meta name="keywords" content="finance automation, accounting bots, RPA, bank reconciliation, invoice matching, month-end close, spadeworks, sage pastel, quickbooks, syspro">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Spadeworks Automation | Every finance task. Automated.">
+  <meta property="og:description" content="Custom software bots for the finance and accounting team of any business. Pay once, own the code forever.">
+  <meta property="og:url" content="https://spadeworks.co.zw">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              red: '#E22D39',
+              redHover: '#C9202C',
+              dark: '#0E1117',
+              card: '#151922',
+              surface: '#1D222E',
+              cream: '#F7F5F0',
+              creamMuted: '#EAE6DC',
+              whatsapp: '#25D366'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+  
+  <!-- Favicon using Spadeworks Red Bar -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect x='4' y='4' width='6' height='24' rx='3' fill='%23E22D39'/><circle cx='20' cy='16' r='8' fill='%23E22D39'/></svg>">
+</head>
+<body class="bg-[#0E1117] text-white min-h-screen relative font-sans selection:bg-[#E22D39] selection:text-white">
+
+  <!-- Ambient Glow Orbs in Spadeworks Red & Soft Cream -->
+  <div class="ambient-glow-red top-[-120px] left-1/4"></div>
+  <div class="ambient-glow-cream top-[500px] right-[-100px]"></div>
+  <div class="ambient-glow-red top-[1800px] left-[-150px]"></div>
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-gradient-to-r from-[#1B0F12] via-[#151922] to-[#1B0F12] border-b border-[#E22D39]/30 py-2.5 px-4 text-center text-xs md:text-sm font-medium">
+    <div class="max-w-7xl mx-auto flex items-center justify-center gap-2 flex-wrap">
+      <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-bold bg-[#E22D39]/20 text-[#FF4D5A] border border-[#E22D39]/40 uppercase tracking-wider">
+        Free Offer
+      </span>
+      <span class="text-slate-200">Tell us one chore your team repeats. We'll show you how a bot can do it for free.</span>
+      <button data-open-demo-modal class="text-[#FF4D5A] hover:text-white font-bold underline underline-offset-4 ml-1 inline-flex items-center gap-1 cursor-pointer">
+        Book a Free Workflow Review →
+      </button>
+    </div>
+  </div>
+
+  <!-- Main Navigation Bar -->
+  <header id="main-nav" class="sticky top-0 z-50 transition-all duration-300 border-b border-white/[0.06] bg-[#0E1117]/85 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Spadeworks Logo from Pitch Deck -->
+      <a href="index.html" class="flex items-center gap-3 group">
+        <div class="w-1.5 h-8 bg-[#E22D39] rounded-full group-hover:scale-y-110 transition-transform"></div>
+        <div class="flex flex-col">
+          <span class="text-2xl font-extrabold tracking-tight text-white flex items-center">
+            spadeworks<span class="text-[#E22D39]">.</span>
+          </span>
+          <span class="text-[9px] tracking-[0.28em] text-slate-400 uppercase font-mono font-bold -mt-1">
+            AUTOMATION
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-300">
+        <a href="#problems" class="hover:text-[#FF4D5A] transition-colors">The Problem</a>
+        <a href="#bot-jobs" class="hover:text-[#FF4D5A] transition-colors">What Bots Do</a>
+        <a href="#compatibility" class="hover:text-[#FF4D5A] transition-colors">Software & Banks</a>
+        <a href="#multi-currency" class="hover:text-[#FF4D5A] transition-colors">Multi-Currency</a>
+        <a href="#pay-once" class="hover:text-[#FF4D5A] transition-colors">Pay Once</a>
+        <a href="#calculator" class="hover:text-[#FF4D5A] transition-colors">Calculator</a>
+        <a href="#pricing" class="hover:text-[#FF4D5A] transition-colors">Pricing & Pilots</a>
+      </nav>
+
+      <!-- CTA Action -->
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="https://wa.me/263770000000?text=Hi%20Farai,%20I'm%20interested%20in%20automating%20a%20finance%20task%20with%20Spadeworks" target="_blank" rel="noopener noreferrer" class="btn-whatsapp text-xs py-2 px-3.5">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+          <span>WhatsApp Farai</span>
+        </a>
+        <button data-open-demo-modal class="btn-primary text-xs py-2.5 px-4">
+          <span>Book Free Review</span>
+        </button>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="lg:hidden p-2 text-slate-400 hover:text-white focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-[#151922] border-b border-slate-800 px-6 py-6 space-y-4">
+      <a href="#problems" class="block text-slate-200 hover:text-[#FF4D5A] font-semibold py-1">The Problem</a>
+      <a href="#bot-jobs" class="block text-slate-200 hover:text-[#FF4D5A] font-semibold py-1">What Bots Do</a>
+      <a href="#compatibility" class="block text-slate-200 hover:text-[#FF4D5A] font-semibold py-1">Supported Software & Banks</a>
+      <a href="#multi-currency" class="block text-slate-200 hover:text-[#FF4D5A] font-semibold py-1">Multi-Currency & Forex</a>
+      <a href="#pay-once" class="block text-slate-200 hover:text-[#FF4D5A] font-semibold py-1">Pay Once Model</a>
+      <a href="#calculator" class="block text-slate-200 hover:text-[#FF4D5A] font-semibold py-1">Savings Calculator</a>
+      <a href="#pricing" class="block text-slate-200 hover:text-[#FF4D5A] font-semibold py-1">Pricing & 5-Day Pilot</a>
+      <div class="pt-4 border-t border-slate-800 flex flex-col gap-3">
+        <a href="https://wa.me/263770000000?text=Hi%20Farai,%20I'm%20interested%20in%20automating%20a%20finance%20task" target="_blank" rel="noopener noreferrer" class="btn-whatsapp w-full text-center py-3">
+          Chat on WhatsApp with Farai
+        </a>
+        <button data-open-demo-modal class="btn-primary w-full text-center py-3">Book Free Review</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative pt-12 pb-16 md:pt-20 md:pb-24 overflow-hidden bg-grid-pattern">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Hero Content -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          
+          <div class="inline-flex justify-center lg:justify-start">
+            <div class="pill-badge">
+              <span class="w-2 h-2 rounded-full bg-[#E22D39] pulse-indicator-red"></span>
+              <span>Finance Automation Made Super Simple</span>
+              <span class="text-slate-500">•</span>
+              <span class="text-white font-mono text-xs">spadeworks.co.zw</span>
+            </div>
+          </div>
+
+          <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.08]">
+            Every finance task. <br />
+            <span class="text-[#E22D39]">Automated.</span>
+          </h1>
+
+          <p class="text-lg sm:text-xl text-slate-300 max-w-2xl leading-relaxed">
+            Custom software bots for the finance and accounting team of any business, in any industry.
+          </p>
+
+          <div class="text-xl sm:text-2xl font-extrabold tracking-tight">
+            <span class="text-[#FF4D5A]">Faster.</span> 
+            <span class="text-white">Cheaper.</span> 
+            <span class="text-[#FF4D5A]">Sharper.</span> 
+            <span class="text-white underline decoration-[#E22D39] decoration-4 underline-offset-4">Yours.</span>
+          </div>
+
+          <!-- 5-Year-Old Explanation Box -->
+          <div class="p-4 bg-[#151922] rounded-xl border border-slate-800 text-left text-sm text-slate-300 leading-relaxed max-w-xl">
+            <span class="font-bold text-white flex items-center gap-1.5 mb-1">
+              <span class="text-lg">🤖</span> What is a bot? (In plain English):
+            </span>
+            Think of a bot like a super-fast digital helper living inside your computer. When you give it a boring chore—like matching bank receipts or typing bills—it finishes it in seconds, never gets tired, and never makes a typo.
+          </div>
+
+          <!-- Hero Buttons -->
+          <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+            <button data-open-demo-modal class="btn-primary w-full sm:w-auto text-base py-3.5 px-8">
+              <span>Book a Free Workflow Review</span>
+              <svg class="w-5 h-5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </button>
+            <a href="https://wa.me/263770000000?text=Hi%20Farai,%20I%20want%20to%20learn%20how%20Spadeworks%20can%20automate%20our%20accounting" target="_blank" rel="noopener noreferrer" class="btn-secondary w-full sm:w-auto text-base py-3.5 px-7 flex items-center justify-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-[#25D366] animate-pulse"></span>
+              <span>Quick Chat on WhatsApp</span>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Right Hero Visual: Pitch Deck Mark + Live Bot Window -->
+        <div class="lg:col-span-5 relative flex justify-center">
+          
+          <div class="relative w-full max-w-md aspect-square flex items-center justify-center">
+            
+            <div class="absolute w-64 h-64 sm:w-72 sm:h-72 rounded-full bg-[#E22D39] opacity-90 -top-4 -right-4 shadow-2xl shadow-[#E22D39]/30"></div>
+            <div class="absolute w-40 h-40 rounded-full bg-[#11141A] border-4 border-[#1E232E] bottom-2 left-2 z-10 shadow-2xl"></div>
+            <div class="absolute w-16 h-16 rounded-full bg-[#F7F5F0] top-0 right-12 z-0 opacity-80"></div>
+
+            <div class="relative z-20 w-full glass-panel p-6 rounded-2xl border border-white/10 shadow-2xl bg-[#11141A]/95">
+              
+              <div class="flex items-center justify-between border-b border-slate-800 pb-3 mb-4">
+                <div class="flex items-center gap-2">
+                  <span class="w-3 h-3 rounded-full bg-[#E22D39]"></span>
+                  <span class="text-xs font-mono font-bold text-white">SPADEWORKS BOT #01</span>
+                </div>
+                <span class="text-[11px] font-mono font-bold text-[#FF6B76] bg-[#E22D39]/20 px-2 py-0.5 rounded border border-[#E22D39]/40">
+                  LIVE WORKER
+                </span>
+              </div>
+
+              <div class="space-y-3 font-mono text-xs">
+                <div class="p-3 bg-[#171B24] rounded-lg border border-slate-800">
+                  <div class="text-slate-400 text-[11px]">Current Chore:</div>
+                  <div class="text-white font-bold mt-0.5">Matching 450 Bank Lines to Receipts</div>
+                  <div class="w-full bg-slate-800 h-1.5 rounded-full mt-2 overflow-hidden">
+                    <div class="bg-[#E22D39] h-full w-[94%] transition-all"></div>
+                  </div>
+                </div>
+
+                <div class="flex justify-between items-center text-[11px] pt-1 text-slate-300">
+                  <span>Speed:</span>
+                  <span class="font-bold text-[#FF6B76]">0.4 seconds per bill</span>
+                </div>
+
+                <div class="flex justify-between items-center text-[11px] text-slate-300">
+                  <span>Typing Errors:</span>
+                  <span class="font-bold text-white">0 (Zero mistakes)</span>
+                </div>
+
+                <div class="flex justify-between items-center text-[11px] text-slate-300">
+                  <span>Software Rent:</span>
+                  <span class="font-bold text-[#FF6B76]">$0 / month (You own it!)</span>
+                </div>
+              </div>
+
+              <div class="mt-4 pt-3 border-t border-slate-800 flex items-center justify-between text-[11px] text-slate-400">
+                <span>Status: Never tired.</span>
+                <span class="text-[#FF6B76] font-semibold">● Ready 24/7</span>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- RECOMMENDATION #2: COMPATIBILITY STRIP (Sage Pastel, QuickBooks, Syspro, Regional Banks) -->
+  <section id="compatibility" class="py-12 bg-[#12151D] border-y border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-xs uppercase tracking-widest font-mono text-slate-400 font-bold mb-6">
+        Works With the Software & Bank Statements You Already Use
+      </p>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 max-w-5xl mx-auto font-mono text-xs font-bold text-slate-300">
+        <div class="p-3 bg-[#171B24] rounded-xl border border-slate-800 flex items-center justify-center hover:border-[#E22D39]/50 transition-colors">
+          <span>Sage Pastel & Evo</span>
+        </div>
+        <div class="p-3 bg-[#171B24] rounded-xl border border-slate-800 flex items-center justify-center hover:border-[#E22D39]/50 transition-colors">
+          <span>QuickBooks (Desk/Online)</span>
+        </div>
+        <div class="p-3 bg-[#171B24] rounded-xl border border-slate-800 flex items-center justify-center hover:border-[#E22D39]/50 transition-colors">
+          <span>Syspro ERP</span>
+        </div>
+        <div class="p-3 bg-[#171B24] rounded-xl border border-slate-800 flex items-center justify-center hover:border-[#E22D39]/50 transition-colors">
+          <span>Xero Accounting</span>
+        </div>
+        <div class="p-3 bg-[#171B24] rounded-xl border border-slate-800 flex items-center justify-center hover:border-[#E22D39]/50 transition-colors">
+          <span>SAP Business One</span>
+        </div>
+        <div class="p-3 bg-[#171B24] rounded-xl border border-slate-800 flex items-center justify-center hover:border-[#E22D39]/50 transition-colors">
+          <span>Excel & CSV Sheets</span>
+        </div>
+      </div>
+
+      <!-- Bank statement compatibility chips -->
+      <div class="mt-4 flex flex-wrap justify-center items-center gap-2 text-[11px] font-mono text-slate-500">
+        <span class="text-slate-400 font-semibold">Bank Formats Supported:</span>
+        <span class="px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-300">Stanbic Bank</span>
+        <span class="px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-300">Nedbank</span>
+        <span class="px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-300">CBZ Bank</span>
+        <span class="px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-300">CABS</span>
+        <span class="px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-300">Standard Chartered</span>
+        <span class="px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-300">EcoCash Business / FCA</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE 3 PAIN POINTS (From Pitch Deck Slide 2) -->
+  <section id="problems" class="py-24 bg-[#0E1117] border-b border-slate-800 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="pill-badge mb-3">Sound familiar?</div>
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+          Finance teams are buried in repetition.
+        </h2>
+        <p class="mt-4 text-base sm:text-lg text-slate-300">
+          When smart people spend all day typing numbers, bad things happen. Here is why companies are tired of the old way:
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Card 1: TOO SLOW -->
+        <div class="glass-panel p-8 rounded-2xl flex flex-col justify-between border-t-4 border-t-[#E22D39]">
+          <div>
+            <div class="text-xs font-mono font-bold text-[#FF4D5A] uppercase tracking-wider mb-2">
+              01 · TOO SLOW
+            </div>
+            <h3 class="text-2xl font-extrabold text-white">Closing takes days</h3>
+            <p class="mt-4 text-sm text-slate-300 leading-relaxed">
+              Typing in bills, bank lines and invoices by hand keeps the books open far too long. Your team ends up working late nights and weekends at the end of every month.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-800 text-xs text-slate-400">
+            🐢 <span class="font-semibold text-white">Simple terms:</span> People are typing numbers that a computer could finish in 3 seconds.
+          </div>
+        </div>
+
+        <!-- Card 2: TOO COSTLY -->
+        <div class="glass-panel p-8 rounded-2xl flex flex-col justify-between border-t-4 border-t-[#E22D39]">
+          <div>
+            <div class="text-xs font-mono font-bold text-[#FF4D5A] uppercase tracking-wider mb-2">
+              02 · TOO COSTLY
+            </div>
+            <h3 class="text-2xl font-extrabold text-white">You pay twice</h3>
+            <p class="mt-4 text-sm text-slate-300 leading-relaxed">
+              Skilled salaries go on copy-paste, and software subscriptions keep adding to the bill. You pay great accountants to be data typists, and then pay monthly rent to foreign software vendors.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-800 text-xs text-slate-400">
+            💸 <span class="font-semibold text-white">Simple terms:</span> You're paying big money for boring copy-pasting every single month.
+          </div>
+        </div>
+
+        <!-- Card 3: TOO RISKY -->
+        <div class="glass-panel p-8 rounded-2xl flex flex-col justify-between border-t-4 border-t-[#E22D39]">
+          <div>
+            <div class="text-xs font-mono font-bold text-[#FF4D5A] uppercase tracking-wider mb-2">
+              03 · TOO RISKY
+            </div>
+            <h3 class="text-2xl font-extrabold text-white">Small slips, big costs</h3>
+            <p class="mt-4 text-sm text-slate-300 leading-relaxed">
+              A mistyped digit or a double payment usually surfaces late, when it hurts most. Tired human eyes make mistakes after looking at spreadsheets for 8 hours.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-800 text-xs text-slate-400">
+            ⚠️ <span class="font-semibold text-white">Simple terms:</span> One typed zero in the wrong place can lose thousands of dollars.
+          </div>
+        </div>
+
+      </div>
+
+      <div class="mt-14 text-center">
+        <div class="inline-block p-4 sm:p-6 bg-[#151922] rounded-2xl border border-slate-800 max-w-3xl">
+          <p class="text-base sm:text-xl font-bold text-white">
+            "Every hour spent keying data is an hour not spent <span class="text-[#FF4D5A] underline decoration-[#E22D39] underline-offset-4">advising the business</span>."
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- RECOMMENDATION #3: MULTI-CURRENCY & FOREX AUTOMATION CALLOUT -->
+  <section id="multi-currency" class="py-20 bg-[#151922] border-b border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="glass-panel p-8 sm:p-12 rounded-3xl border border-[#E22D39]/40 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-gradient-to-br from-[#1A1F2B] to-[#12151D]">
+        
+        <div class="lg:col-span-7 space-y-4">
+          <div class="pill-badge">Built for Regional Reality</div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            Stop converting USD & local currency by hand in Excel.
+          </h2>
+          <p class="text-sm sm:text-base text-slate-300 leading-relaxed">
+            Dealing with dual-currency invoices, official interbank rates, and dual-currency tax schedules (like ZIMRA VAT) is exhausting for accountants. Spadeworks bots do all the currency conversions automatically.
+          </p>
+
+          <div class="space-y-2.5 pt-2 text-xs font-mono text-slate-300">
+            <div class="flex items-center gap-2">
+              <span class="text-[#FF4D5A] font-bold">✓</span>
+              <span>Automatically pulls daily official exchange rates</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-[#FF4D5A] font-bold">✓</span>
+              <span>Matches dual-currency receipts to bank accounts without rounding errors</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-[#FF4D5A] font-bold">✓</span>
+              <span>Prepares multi-currency tax schedules ready for statutory submission</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 bg-[#0E1117] p-6 rounded-2xl border border-slate-800 font-mono text-xs space-y-3">
+          <div class="text-[#FF4D5A] uppercase text-[11px] font-bold border-b border-slate-800 pb-2">
+            DUAL-CURRENCY AUTO-CONVERT
+          </div>
+          <div class="flex justify-between p-2 bg-[#171B24] rounded">
+            <span class="text-slate-400">Invoice Amount:</span>
+            <span class="text-white font-bold">$12,450.00 USD</span>
+          </div>
+          <div class="flex justify-between p-2 bg-[#171B24] rounded">
+            <span class="text-slate-400">Payment in Local Currency:</span>
+            <span class="text-white font-bold">Auto-Reconciled @ Daily Rate</span>
+          </div>
+          <div class="flex justify-between p-2 bg-[#171B24] rounded">
+            <span class="text-slate-400">Variance:</span>
+            <span class="text-[#FF6B76] font-bold">$0.00 (Zero discrepancy)</span>
+          </div>
+          <div class="text-[11px] text-slate-400 text-center pt-1">
+            Zero time wasted tapping on a desk calculator.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- THE 8 BOT JOBS (From Pitch Deck Slide 3) -->
+  <section id="bot-jobs" class="py-24 bg-[#11141C] border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="pill-badge mb-3">The Solution</div>
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+          If your finance team repeats it, a bot can run it.
+        </h2>
+        <p class="mt-4 text-base sm:text-lg text-slate-300">
+          Here are the 8 big chores our custom software bots take off your hands forever:
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Job 01 -->
+        <div class="cream-card p-6 flex flex-col justify-between hover:shadow-xl transition-all">
+          <div>
+            <div class="text-xs font-mono font-bold text-[#E22D39] mb-3">01</div>
+            <h3 class="text-xl font-extrabold text-black">Payables</h3>
+            <p class="text-xs text-slate-700 mt-2 font-medium">Bills read, coded and ready for approval.</p>
+          </div>
+          <div class="mt-6 pt-3 border-t border-slate-300/80 text-[11px] text-slate-600">
+            🤖 Reads incoming invoices and checks if they match your orders.
+          </div>
+        </div>
+
+        <!-- Job 02 -->
+        <div class="cream-card p-6 flex flex-col justify-between hover:shadow-xl transition-all">
+          <div>
+            <div class="text-xs font-mono font-bold text-[#E22D39] mb-3">02</div>
+            <h3 class="text-xl font-extrabold text-black">Receivables</h3>
+            <p class="text-xs text-slate-700 mt-2 font-medium">Invoices sent and overdue ones chased.</p>
+          </div>
+          <div class="mt-6 pt-3 border-t border-slate-300/80 text-[11px] text-slate-600">
+            🤖 Sends bills to your clients and politely reminds them to pay on time.
+          </div>
+        </div>
+
+        <!-- Job 03 -->
+        <div class="cream-card p-6 flex flex-col justify-between hover:shadow-xl transition-all">
+          <div>
+            <div class="text-xs font-mono font-bold text-[#E22D39] mb-3">03</div>
+            <h3 class="text-xl font-extrabold text-black">Reconciliation</h3>
+            <p class="text-xs text-slate-700 mt-2 font-medium">Bank and payment lines matched to the ledger.</p>
+          </div>
+          <div class="mt-6 pt-3 border-t border-slate-300/80 text-[11px] text-slate-600">
+            🤖 Matches every single dollar between your bank and your books in seconds.
+          </div>
+        </div>
+
+        <!-- Job 04 -->
+        <div class="cream-card p-6 flex flex-col justify-between hover:shadow-xl transition-all">
+          <div>
+            <div class="text-xs font-mono font-bold text-[#E22D39] mb-3">04</div>
+            <h3 class="text-xl font-extrabold text-black">Payroll and journals</h3>
+            <p class="text-xs text-slate-700 mt-2 font-medium">Entries prepared, checked and posted.</p>
+          </div>
+          <div class="mt-6 pt-3 border-t border-slate-300/80 text-[11px] text-slate-600">
+            🤖 Makes sure everyone gets paid correctly and writes down the journal entries.
+          </div>
+        </div>
+
+        <!-- Job 05 -->
+        <div class="cream-card p-6 flex flex-col justify-between hover:shadow-xl transition-all">
+          <div>
+            <div class="text-xs font-mono font-bold text-[#E22D39] mb-3">05</div>
+            <h3 class="text-xl font-extrabold text-black">Month-end close</h3>
+            <p class="text-xs text-slate-700 mt-2 font-medium">Accruals, variances and a draft close pack.</p>
+          </div>
+          <div class="mt-6 pt-3 border-t border-slate-300/80 text-[11px] text-slate-600">
+            🤖 Packs up your monthly numbers into a clean report so closing takes hours, not weeks.
+          </div>
+        </div>
+
+        <!-- Job 06 -->
+        <div class="cream-card p-6 flex flex-col justify-between hover:shadow-xl transition-all">
+          <div>
+            <div class="text-xs font-mono font-bold text-[#E22D39] mb-3">06</div>
+            <h3 class="text-xl font-extrabold text-black">Tax & compliance</h3>
+            <p class="text-xs text-slate-700 mt-2 font-medium">Figures gathered and schedules prepared.</p>
+          </div>
+          <div class="mt-6 pt-3 border-t border-slate-300/80 text-[11px] text-slate-600">
+            🤖 Pulls together the exact numbers needed for tax filings (like ZIMRA or VAT).
+          </div>
+        </div>
+
+        <!-- Job 07 -->
+        <div class="cream-card p-6 flex flex-col justify-between hover:shadow-xl transition-all">
+          <div>
+            <div class="text-xs font-mono font-bold text-[#E22D39] mb-3">07</div>
+            <h3 class="text-xl font-extrabold text-black">Reporting</h3>
+            <p class="text-xs text-slate-700 mt-2 font-medium">Fresh reports in leadership's inbox, on time.</p>
+          </div>
+          <div class="mt-6 pt-3 border-t border-slate-300/80 text-[11px] text-slate-600">
+            🤖 Sends the boss clean, beautiful financial graphs before they even ask.
+          </div>
+        </div>
+
+        <!-- Job 08 -->
+        <div class="bg-[#0E1117] text-white p-6 rounded-[1.25rem] border-2 border-[#E22D39] flex flex-col justify-between shadow-lg shadow-[#E22D39]/20">
+          <div>
+            <div class="text-xs font-mono font-bold text-[#FF4D5A] mb-3">08</div>
+            <h3 class="text-xl font-extrabold text-white">Data cleanup</h3>
+            <p class="text-xs text-slate-300 mt-2 font-medium">Messy sheets fixed, history moved between systems.</p>
+          </div>
+          <div class="mt-6 pt-3 border-t border-slate-800 text-[11px] text-slate-400">
+            🤖 Turns crazy messy spreadsheets into neat, organized numbers automatically.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- RECOMMENDATION #5: ZERO-RISK 100% ACCURACY GUARANTEE -->
+  <section class="py-16 bg-[#0E1117]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="guarantee-box p-8 sm:p-10 flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left">
+        <div class="w-20 h-20 rounded-full bg-[#E22D39] flex items-center justify-center shrink-0 shadow-xl shadow-[#E22D39]/30">
+          <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        </div>
+        <div>
+          <div class="text-xs uppercase font-mono font-bold text-[#FF4D5A] mb-1">THE SPADEWORKS ZERO-RISK GUARANTEE</div>
+          <h3 class="text-2xl font-extrabold text-white">100% Accuracy or You Pay Exactly $0.</h3>
+          <p class="text-xs sm:text-sm text-slate-300 mt-2 leading-relaxed">
+            We test your bot side-by-side with your manual process. If the bot doesn't match your statements with 100% precision, you don't pay a single cent. You only take the keys when you trust it completely.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAY ONCE. OWN IT FOREVER. -->
+  <section id="pay-once" class="py-24 bg-[#11141C] border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="pill-badge mb-3">Our Core Promise</div>
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+          Pay once. Own it forever.
+        </h2>
+        <p class="mt-4 text-base sm:text-lg text-slate-300">
+          Most vendors rent you software. We sell you the finished machine.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        
+        <!-- Left: The Rental Model -->
+        <div class="cream-card p-8 sm:p-10 flex flex-col justify-between">
+          <div>
+            <div class="text-xs uppercase font-mono font-bold text-slate-500 mb-2">THE RENTAL MODEL</div>
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-black">Monthly subscription</h3>
+            <ul class="mt-6 space-y-4 text-sm text-slate-800 font-medium">
+              <li class="flex items-center gap-3">
+                <span class="text-red-500 font-bold text-base">✕</span>
+                <span>A fee every month, with no end</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="text-red-500 font-bold text-base">✕</span>
+                <span>Prices climb when the vendor decides</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="text-red-500 font-bold text-base">✕</span>
+                <span>Stop paying and your bot disappears</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="text-red-500 font-bold text-base">✕</span>
+                <span>Stuck with one supplier forever</span>
+              </li>
+            </ul>
+          </div>
+          <div class="mt-8 pt-4 border-t border-slate-300 text-xs text-slate-600">
+            Like renting an apartment. You pay every month and never own a brick.
+          </div>
+        </div>
+
+        <!-- Right: The Spadeworks Way -->
+        <div class="bg-[#0E1117] text-white p-8 sm:p-10 rounded-[1.25rem] border-2 border-[#E22D39] flex flex-col justify-between shadow-2xl shadow-[#E22D39]/20">
+          <div>
+            <div class="text-xs uppercase font-mono font-bold text-[#FF4D5A] mb-2">THE SPADEWORKS WAY</div>
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-white">One fee. You own the source code.</h3>
+            <ul class="mt-6 space-y-4 text-sm text-slate-200 font-medium">
+              <li class="flex items-center gap-3">
+                <span class="text-[#FF4D5A] font-bold text-base">✓</span>
+                <span>Pay once, nothing monthly</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="text-[#FF4D5A] font-bold text-base">✓</span>
+                <span>Full source code is 100% yours</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="text-[#FF4D5A] font-bold text-base">✓</span>
+                <span>Run it as long as you like</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="text-[#FF4D5A] font-bold text-base">✓</span>
+                <span>Free to take it anywhere</span>
+              </li>
+            </ul>
+          </div>
+          <div class="mt-8 pt-4 border-t border-slate-800 text-xs text-[#FF6B76]">
+            Like buying your car. It's yours forever, with zero monthly car notes.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SAVINGS CALCULATOR (Dynamic & Intact) -->
+  <section id="calculator" class="py-24 bg-[#0E1117] border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="pill-badge mb-3">Simple Math</div>
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+          How much time & money will you save?
+        </h2>
+        <p class="mt-4 text-base sm:text-lg text-slate-300">
+          Slide the bars to match your team. The calculator shows how many hours your team gets back every single month:
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <div class="lg:col-span-7 glass-panel p-6 sm:p-8 rounded-2xl space-y-8">
+          
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <label for="calc-volume" class="text-sm font-bold text-white">
+                How many bills and bank lines do you handle each month?
+              </label>
+              <span id="calc-volume-val" class="font-mono text-sm font-bold text-[#FF4D5A] bg-[#E22D39]/10 px-2 py-0.5 rounded border border-[#E22D39]/30">
+                15,000
+              </span>
+            </div>
+            <input type="range" id="calc-volume" min="1000" max="100000" step="1000" value="15000">
+            <div class="flex justify-between text-[11px] font-mono text-slate-500 mt-1">
+              <span>1,000 / mo</span>
+              <span>50,000 / mo</span>
+              <span>100,000+ / mo</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <label for="calc-team" class="text-sm font-bold text-white">
+                How many people are on your finance & accounting team?
+              </label>
+              <span id="calc-team-val" class="font-mono text-sm font-bold text-[#FF4D5A] bg-[#E22D39]/10 px-2 py-0.5 rounded border border-[#E22D39]/30">
+                8 people
+              </span>
+            </div>
+            <input type="range" id="calc-team" min="1" max="50" step="1" value="8">
+            <div class="flex justify-between text-[11px] font-mono text-slate-500 mt-1">
+              <span>1 person</span>
+              <span>25 people</span>
+              <span>50+ people</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <label for="calc-close-days" class="text-sm font-bold text-white">
+                How many days does it take to close the books each month right now?
+              </label>
+              <span id="calc-close-days-val" class="font-mono text-sm font-bold text-[#FF4D5A] bg-[#E22D39]/10 px-2 py-0.5 rounded border border-[#E22D39]/30">
+                14 days
+              </span>
+            </div>
+            <input type="range" id="calc-close-days" min="3" max="25" step="1" value="14">
+            <div class="flex justify-between text-[11px] font-mono text-slate-500 mt-1">
+              <span>3 days</span>
+              <span>14 days</span>
+              <span>25 days</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <label for="calc-salary" class="text-sm font-bold text-white">
+                Average salary per team member (Annual)
+              </label>
+              <span id="calc-salary-val" class="font-mono text-sm font-bold text-[#FF4D5A] bg-[#E22D39]/10 px-2 py-0.5 rounded border border-[#E22D39]/30">
+                $45,000
+              </span>
+            </div>
+            <input type="range" id="calc-salary" min="15000" max="150000" step="5000" value="45000">
+            <div class="flex justify-between text-[11px] font-mono text-slate-500 mt-1">
+              <span>$15,000</span>
+              <span>$75,000</span>
+              <span>$150,000+</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="lg:col-span-5">
+          <div class="bg-[#11141C] p-8 rounded-2xl border-2 border-[#E22D39] shadow-2xl shadow-[#E22D39]/20 relative overflow-hidden">
+            
+            <div class="text-xs uppercase tracking-widest font-mono text-[#FF4D5A] font-bold mb-1">
+              Estimated Value Generated
+            </div>
+            <div id="res-annual-savings" class="text-4xl sm:text-5xl font-extrabold text-white font-mono tracking-tight">
+              $205,400
+            </div>
+            <p class="text-xs text-slate-400 mt-1">
+              Money saved from eliminated copy-paste labor and zero typing errors.
+            </p>
+
+            <div class="mt-8 space-y-4 pt-6 border-t border-slate-800">
+              
+              <div class="flex justify-between items-center">
+                <span class="text-sm text-slate-300">Hours Saved Every Month</span>
+                <span id="res-hours-saved" class="font-mono font-bold text-white text-base">1,620 hrs/mo</span>
+              </div>
+
+              <div class="flex justify-between items-center">
+                <span class="text-sm text-slate-300">Your New Close Time</span>
+                <span id="res-new-close" class="font-mono font-bold text-[#FF4D5A] text-base">2.8 days</span>
+              </div>
+
+              <div class="flex justify-between items-center">
+                <span class="text-sm text-slate-300">Investment Return Ratio</span>
+                <span id="res-roi-percent" class="font-mono font-bold text-white text-base">+480%</span>
+              </div>
+
+            </div>
+
+            <div class="mt-8">
+              <button data-open-demo-modal class="btn-primary w-full text-center py-3.5 text-sm">
+                Get Your Free Workflow Review
+              </button>
+              <p class="text-[11px] text-center text-slate-400 mt-2 font-mono">
+                No pushy sales calls. Real bot advice from Farai.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- RECOMMENDATION #4: PRICING WITH 5-DAY FAST-TRACK PILOT -->
+  <section id="pricing" class="py-24 bg-[#11141C] border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="pill-badge mb-3">Clear & Honest Options</div>
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+          How to Work with Spadeworks
+        </h2>
+        <p class="mt-4 text-base sm:text-lg text-slate-300">
+          Start with a zero-risk 5-day pilot, or automate your full month-end close. You own the code forever.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch max-w-6xl mx-auto">
+        
+        <!-- Tier 1: 5-Day Fast-Track Pilot (Recommendation #4) -->
+        <div class="bg-[#151922] p-8 rounded-2xl border-2 border-emerald-500/50 shadow-xl flex flex-col justify-between relative">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-emerald-500 text-black text-[11px] font-bold font-mono px-3.5 py-0.5 rounded-full uppercase tracking-wider">
+            Fastest Way to Test
+          </div>
+          <div>
+            <div class="text-xs uppercase font-mono font-bold text-emerald-400">STAGE 1: LOW RISK</div>
+            <h3 class="text-2xl font-extrabold text-white mt-1">5-Day Pilot Bot</h3>
+            <p class="text-xs text-slate-300 mt-2">Test the waters. We automate 1 specific repetitive chore for you in 5 days.</p>
+            
+            <div class="mt-6 pb-6 border-b border-slate-800">
+              <span class="text-4xl font-extrabold text-white font-mono">$450</span>
+              <div class="text-slate-400 text-xs mt-1">One-time pilot • Proves value in week 1</div>
+            </div>
+
+            <ul class="mt-6 space-y-3 text-xs text-slate-300">
+              <li class="flex items-center gap-2">
+                <span class="text-emerald-400">✓</span> 1 specific sub-task automated in 5 business days
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-emerald-400">✓</span> Tested directly on your real data
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-emerald-400">✓</span> Full source code handed over
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-emerald-400">✓</span> Pilot fee credited towards full rollout if you proceed!
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-emerald-400">✓</span> 100% money-back guarantee
+              </li>
+            </ul>
+          </div>
+          <div class="mt-8">
+            <button data-open-demo-modal class="btn-secondary w-full text-center py-3 text-xs">
+              Start 5-Day Pilot
+            </button>
+          </div>
+        </div>
+
+        <!-- Tier 2: Full Department Custom Build (Featured) -->
+        <div class="bg-[#0E1117] p-8 rounded-2xl border-2 border-[#E22D39] shadow-2xl shadow-[#E22D39]/20 flex flex-col justify-between relative">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#E22D39] text-white text-[11px] font-bold font-mono px-3.5 py-0.5 rounded-full uppercase tracking-wider">
+            Most Popular
+          </div>
+          <div>
+            <div class="text-xs uppercase font-mono font-bold text-[#FF4D5A]">FULL SUITE</div>
+            <h3 class="text-2xl font-extrabold text-white mt-1">Complete Department</h3>
+            <p class="text-xs text-slate-300 mt-2">End-to-end automation for Payables, Bank Reconciliations, and Month-End Close.</p>
+            
+            <div class="mt-6 pb-6 border-b border-slate-800">
+              <span class="text-4xl font-extrabold text-white font-mono">Custom Build</span>
+              <div class="text-slate-400 text-xs mt-1">Pay once • Source code is 100% yours</div>
+            </div>
+
+            <ul class="mt-6 space-y-3 text-xs text-slate-200">
+              <li class="flex items-center gap-2">
+                <span class="text-[#FF4D5A]">✓</span> All 8 finance tasks automated to your exact workflow
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-[#FF4D5A]">✓</span> Works with Sage, QuickBooks, Syspro, Xero or SAP
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-[#FF4D5A]">✓</span> Month-end close cut from 14 days down to 1–2 days
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-[#FF4D5A]">✓</span> Complete source code library is yours forever
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-[#FF4D5A]">✓</span> On-site or Zoom training for your team
+              </li>
+            </ul>
+          </div>
+          <div class="mt-8">
+            <button data-open-demo-modal class="btn-primary w-full text-center py-3.5 text-xs">
+              Book Full Department Review
+            </button>
+          </div>
+        </div>
+
+        <!-- Tier 3: Optional Peace-of-Mind "Bot Care" -->
+        <div class="glass-panel p-8 rounded-2xl flex flex-col justify-between">
+          <div>
+            <div class="text-xs uppercase font-mono font-bold text-slate-400">OPTIONAL ADD-ON</div>
+            <h3 class="text-2xl font-extrabold text-white mt-1">Monthly "Bot Care"</h3>
+            <p class="text-xs text-slate-300 mt-2">Our optional safety net so your bots are always tuned when banks change formats.</p>
+            
+            <div class="mt-6 pb-6 border-b border-slate-800">
+              <span class="text-4xl font-extrabold text-white font-mono">Retainer</span>
+              <div class="text-slate-400 text-xs mt-1">Cancel anytime • Code always remains yours</div>
+            </div>
+
+            <ul class="mt-6 space-y-3 text-xs text-slate-300">
+              <li class="flex items-center gap-2">
+                <span class="text-[#FF4D5A]">✓</span> Guaranteed 4-hour fix SLA during Month-End Close
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-[#FF4D5A]">✓</span> Free updates if bank statement format changes
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-[#FF4D5A]">✓</span> Free updates when tax rules or ZIMRA forms change
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-[#FF4D5A]">✓</span> Direct phone & WhatsApp access to Farai
+              </li>
+            </ul>
+          </div>
+          <div class="mt-8">
+            <button data-open-demo-modal class="btn-secondary w-full text-center py-3 text-xs">
+              Add Bot Care
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FINAL CTA (Pitch Deck Slide 8) -->
+  <section class="py-24 bg-gradient-to-b from-[#11141C] to-[#0E1117] text-center relative overflow-hidden">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="flex items-center justify-center gap-2 mb-6">
+        <div class="w-1.5 h-8 bg-[#E22D39] rounded-full"></div>
+        <span class="text-3xl font-extrabold text-white tracking-tight">
+          spadeworks<span class="text-[#E22D39]">.</span>
+        </span>
+      </div>
+
+      <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
+        Let's take the busywork off your team.
+      </h2>
+      <p class="mt-6 text-base sm:text-lg text-slate-300 max-w-2xl mx-auto">
+        Tell us one task your team repeats. We'll tell you how a bot can take it over. The first workflow review is 100% free.
+      </p>
+
+      <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <button data-open-demo-modal class="btn-primary text-base py-4 px-9 w-full sm:w-auto">
+          Book a Free Workflow Review
+        </button>
+        <a href="https://wa.me/263770000000?text=Hi%20Farai,%20let's%20discuss%20automating%20our%20finance%20tasks" target="_blank" rel="noopener noreferrer" class="btn-whatsapp text-base py-4 px-8 w-full sm:w-auto flex items-center justify-center gap-2">
+          <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+          <span>Chat on WhatsApp</span>
+        </a>
+      </div>
+
+      <div class="mt-8 text-xs font-mono text-slate-500">
+        Faster. Cheaper. Sharper. Yours. • spadeworks.co.zw
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#090B0F] border-t border-slate-800/80 py-12 text-slate-400 text-xs font-mono">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <div class="w-1 h-5 bg-[#E22D39] rounded-full"></div>
+        <span class="font-bold text-white tracking-wider">SPADEWORKS AUTOMATION</span>
+        <span class="text-slate-600">|</span>
+        <span class="text-slate-400">spadeworks.co.zw</span>
+      </div>
+      <div>
+        Contact: <a href="mailto:farai@spadeworks.co.zw" class="text-[#FF6B76] hover:underline">farai@spadeworks.co.zw</a>
+      </div>
+      <div class="text-slate-500 text-[11px]">
+        © 2026 Spadeworks Automation. Deployed on Cloudflare Pages via GitHub.
+      </div>
+    </div>
+  </footer>
+
+  <!-- RECOMMENDATION #1: FLOATING WHATSAPP BUTTON (Always visible for effortless conversions) -->
+  <a href="https://wa.me/263770000000?text=Hi%20Farai,%20I'm%20looking%20at%20Spadeworks%20and%20want%20to%20automate%20a%20finance%20task" target="_blank" rel="noopener noreferrer" class="floating-whatsapp group" title="Chat with Farai on WhatsApp">
+    <div class="whatsapp-icon-circle">
+      <svg class="w-5 h-5 text-white fill-current" viewBox="0 0 24 24">
+        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+      </svg>
+    </div>
+    <div class="flex flex-col text-left">
+      <span class="text-[10px] text-emerald-400 font-mono font-bold leading-tight">● Online Now</span>
+      <span class="text-xs font-bold text-white group-hover:text-emerald-300 transition-colors">Chat with Farai</span>
+    </div>
+  </a>
+
+  <!-- Modal: Book Free Workflow Review -->
+  <div id="demo-modal" class="modal-overlay">
+    <div class="modal-content p-6 sm:p-8">
+      
+      <div class="flex justify-between items-center pb-4 border-b border-slate-800">
+        <div>
+          <h3 class="text-xl font-bold text-white">Book a Free Workflow Review</h3>
+          <p class="text-xs text-slate-400 mt-1">Tell us one chore. We will show you how a bot can do it.</p>
+        </div>
+        <button id="demo-modal-close" class="p-2 text-slate-400 hover:text-white rounded-lg hover:bg-slate-800 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <!-- Step 1: Form -->
+      <div id="modal-step-1" class="pt-6">
+        <form id="demo-booking-form" class="space-y-4">
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold text-slate-300 mb-1">Your Name</label>
+              <input type="text" required placeholder="John Moyo" class="w-full bg-[#0E1117] border border-slate-700 rounded-lg px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-[#E22D39]">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-slate-300 mb-1">Email Address</label>
+              <input type="email" required placeholder="john@company.co.zw" class="w-full bg-[#0E1117] border border-slate-700 rounded-lg px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-[#E22D39]">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold text-slate-300 mb-1">Company Name</label>
+              <input type="text" required placeholder="Acme Logistics" class="w-full bg-[#0E1117] border border-slate-700 rounded-lg px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-[#E22D39]">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-slate-300 mb-1">WhatsApp / Phone Number</label>
+              <input type="text" placeholder="+263 7..." class="w-full bg-[#0E1117] border border-slate-700 rounded-lg px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-[#E22D39]">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-slate-300 mb-1">Which chore do you want to automate?</label>
+            <select class="w-full bg-[#0E1117] border border-slate-700 rounded-lg px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-[#E22D39]">
+              <option value="pilot">⭐ 5-Day Fast-Track Pilot ($450)</option>
+              <option value="rec">01. Matching Bank Lines to Receipts (Reconciliation)</option>
+              <option value="ap">02. Reading & Checking Supplier Bills (Payables)</option>
+              <option value="close">03. Month-End Close Pack & Accruals</option>
+              <option value="currency">04. Multi-Currency & Dual-Currency Conversions</option>
+              <option value="ar">05. Invoices & Chasing Overdue Receivables</option>
+              <option value="payroll">06. Payroll Journals & Salary Entries</option>
+              <option value="tax">07. Tax & Compliance Schedules (ZIMRA / VAT)</option>
+              <option value="cleanup">08. Fixing Messy Spreadsheets (Data Cleanup)</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-slate-300 mb-1">What accounting software do you use?</label>
+            <input type="text" placeholder="e.g. Sage Pastel, QuickBooks, Syspro, Xero..." class="w-full bg-[#0E1117] border border-slate-700 rounded-lg px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-[#E22D39]">
+          </div>
+
+          <div class="pt-2">
+            <button type="submit" class="btn-primary w-full py-3.5 text-sm">
+              Confirm Free Workflow Review
+            </button>
+            <p class="text-[11px] text-center text-slate-400 mt-2 font-mono">
+              Direct consultation with Farai • spadeworks.co.zw
+            </p>
+          </div>
+
+        </form>
+      </div>
+
+      <!-- Step 2: Confirmation -->
+      <div id="modal-step-2" class="hidden pt-6 text-center space-y-4">
+        <div class="w-16 h-16 rounded-full bg-[#E22D39]/20 border border-[#E22D39]/40 flex items-center justify-center mx-auto text-[#FF4D5A]">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+        </div>
+        <h4 class="text-xl font-bold text-white">Review Request Received!</h4>
+        <p class="text-sm text-slate-300 max-w-sm mx-auto leading-relaxed">
+          Farai will review your workflow and reach out within 24 hours via email or WhatsApp.
+        </p>
+        <div class="pt-4">
+          <button id="modal-reset-btn" class="btn-secondary w-full py-2.5 text-xs">
+            Done
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/calculator.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

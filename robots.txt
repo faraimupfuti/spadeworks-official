@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://spadeworks-automation.pages.dev/sitemap.xml

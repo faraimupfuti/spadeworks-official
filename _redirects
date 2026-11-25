@@ -1,0 +1,6 @@
+# Cloudflare Pages Redirects & Clean URLs
+/solutions      /solutions.html     200
+/security       /security.html      200
+/case-studies   /case-studies.html  200
+/demo           /#demo-modal        302
+/calculator     /#calculator        302

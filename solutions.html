@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What Our Bots Do | Spadeworks Automation</title>
+  <meta name="description" content="Explore the 8 finance tasks our custom software bots handle for your business. Faster. Cheaper. Sharper. Yours.">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              red: '#E22D39',
+              dark: '#0E1117',
+              card: '#151922',
+              cream: '#F7F5F0'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect x='4' y='4' width='6' height='24' rx='3' fill='%23E22D39'/><circle cx='20' cy='16' r='8' fill='%23E22D39'/></svg>">
+</head>
+<body class="bg-[#0E1117] text-white min-h-screen relative font-sans selection:bg-[#E22D39] selection:text-white">
+
+  <div class="ambient-glow-red top-[-100px] left-1/4"></div>
+
+  <!-- Header -->
+  <header id="main-nav" class="sticky top-0 z-50 transition-all duration-300 border-b border-white/[0.06] bg-[#0E1117]/85 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="w-1.5 h-8 bg-[#E22D39] rounded-full"></div>
+        <div class="flex flex-col">
+          <span class="text-2xl font-extrabold tracking-tight text-white flex items-center">
+            spadeworks<span class="text-[#E22D39]">.</span>
+          </span>
+          <span class="text-[9px] tracking-[0.28em] text-slate-400 uppercase font-mono font-bold -mt-1">
+            AUTOMATION
+          </span>
+        </div>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-slate-300">
+        <a href="index.html" class="hover:text-[#FF4D5A] transition-colors">Home</a>
+        <a href="solutions.html" class="text-[#FF4D5A] font-bold transition-colors">What Bots Do</a>
+        <a href="index.html#simulator" class="hover:text-[#FF4D5A] transition-colors">Sandbox</a>
+        <a href="index.html#calculator" class="hover:text-[#FF4D5A] transition-colors">Calculator</a>
+        <a href="security.html" class="hover:text-[#FF4D5A] transition-colors">Safety & Trust</a>
+        <a href="case-studies.html" class="hover:text-[#FF4D5A] transition-colors">Stories</a>
+      </nav>
+
+      <div class="flex items-center gap-4">
+        <button data-open-demo-modal class="btn-primary text-sm py-2.5 px-5">Book Free Review</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="py-20 bg-grid-pattern relative border-b border-slate-800 text-center">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="pill-badge mb-4">Explained Simply</div>
+      <h1 class="text-4xl sm:text-6xl font-extrabold text-white tracking-tight">
+        The 8 Chores Your Bot Does <br>
+        <span class="text-[#FF4D5A]">So You Don't Have To</span>
+      </h1>
+      <p class="mt-4 text-base sm:text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
+        Whenever a computer can do a repetitive typing chore faster and without making mistakes, let the computer do it.
+      </p>
+    </div>
+  </section>
+
+  <!-- Detailed 8 Chores breakdown -->
+  <section class="py-24 bg-[#11141C] border-b border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <!-- Chore 1 & 2 -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <div class="cream-card p-8 flex flex-col justify-between">
+          <div>
+            <div class="text-xs font-mono font-bold text-[#E22D39] mb-2">01 · PAYABLES</div>
+            <h3 class="text-2xl font-extrabold text-black">Reading & Checking Supplier Bills</h3>
+            <p class="text-sm text-slate-700 mt-3 leading-relaxed">
+              When bills arrive in your email or on paper, someone has to read them, type the numbers into your accounting system, and check if the order was really delivered.
+            </p>
+            <div class="mt-4 p-3 bg-white/80 rounded-lg text-xs text-slate-800">
+              🤖 <strong>What the bot does:</strong> It reads the PDF or email, matches it with your purchase order, types the numbers in 2 seconds, and asks your manager: "Ready to pay?"
+            </div>
+          </div>
+        </div>
+
+        <div class="cream-card p-8 flex flex-col justify-between">
+          <div>
+            <div class="text-xs font-mono font-bold text-[#E22D39] mb-2">02 · RECEIVABLES</div>
+            <h3 class="text-2xl font-extrabold text-black">Sending Invoices & Chasing Late Money</h3>
+            <p class="text-sm text-slate-700 mt-3 leading-relaxed">
+              You did the work, but customers forget to pay you. Your team spends hours sending email reminders and calling people for money.
+            </p>
+            <div class="mt-4 p-3 bg-white/80 rounded-lg text-xs text-slate-800">
+              🤖 <strong>What the bot does:</strong> Automatically sends polite reminder statements when an invoice is 3 days, 7 days, or 14 days overdue. Money comes in faster.
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Chore 3 & 4 -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <div class="cream-card p-8 flex flex-col justify-between">
+          <div>
+            <div class="text-xs font-mono font-bold text-[#E22D39] mb-2">03 · RECONCILIATION</div>
+            <h3 class="text-2xl font-extrabold text-black">Bank Reconciliation (No More Excel Headaches)</h3>
+            <p class="text-sm text-slate-700 mt-3 leading-relaxed">
+              Comparing your bank statement against your accounting ledger line by line is the slowest, most tiring chore in every business.
+            </p>
+            <div class="mt-4 p-3 bg-white/80 rounded-lg text-xs text-slate-800">
+              🤖 <strong>What the bot does:</strong> Compares 1,000 bank lines against your receipts in 3 seconds. It matches exact dollars and flags any strange charge for you to review.
+            </div>
+          </div>
+        </div>
+
+        <div class="cream-card p-8 flex flex-col justify-between">
+          <div>
+            <div class="text-xs font-mono font-bold text-[#E22D39] mb-2">04 · PAYROLL & JOURNALS</div>
+            <h3 class="text-2xl font-extrabold text-black">Salary Math & Journal Postings</h3>
+            <p class="text-sm text-slate-700 mt-3 leading-relaxed">
+              Every month, salaries, taxes, pensions, and medical deductions must be calculated and typed into the general ledger.
+            </p>
+            <div class="mt-4 p-3 bg-white/80 rounded-lg text-xs text-slate-800">
+              🤖 <strong>What the bot does:</strong> Verifies the math, formats the salary journal entries, and stages them neatly for your financial controller's approval.
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Chore 5 & 6 -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <div class="cream-card p-8 flex flex-col justify-between">
+          <div>
+            <div class="text-xs font-mono font-bold text-[#E22D39] mb-2">05 · MONTH-END CLOSE</div>
+            <h3 class="text-2xl font-extrabold text-black">Drafting Your Month-End Close Pack</h3>
+            <p class="text-sm text-slate-700 mt-3 leading-relaxed">
+              Closing the books at the end of the month usually takes 10 to 18 days of late-night work for accounting teams.
+            </p>
+            <div class="mt-4 p-3 bg-white/80 rounded-lg text-xs text-slate-800">
+              🤖 <strong>What the bot does:</strong> Does the prep work continuously every night. When the last day of the month arrives, the draft close pack is already ready on your desk.
+            </div>
+          </div>
+        </div>
+
+        <div class="cream-card p-8 flex flex-col justify-between">
+          <div>
+            <div class="text-xs font-mono font-bold text-[#E22D39] mb-2">06 · TAX & COMPLIANCE</div>
+            <h3 class="text-2xl font-extrabold text-black">Gathering Tax Schedules (ZIMRA / VAT / Withholding)</h3>
+            <p class="text-sm text-slate-700 mt-3 leading-relaxed">
+              Gathering numbers for tax filings is stressful when spreadsheets have broken formulas or missing dates.
+            </p>
+            <div class="mt-4 p-3 bg-white/80 rounded-lg text-xs text-slate-800">
+              🤖 <strong>What the bot does:</strong> Pulls together the exact figures and schedules needed for your statutory filings in minutes.
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Chore 7 & 8 -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <div class="cream-card p-8 flex flex-col justify-between">
+          <div>
+            <div class="text-xs font-mono font-bold text-[#E22D39] mb-2">07 · REPORTING</div>
+            <h3 class="text-2xl font-extrabold text-black">Fresh Reports in the Boss's Inbox</h3>
+            <p class="text-sm text-slate-700 mt-3 leading-relaxed">
+              Directors and business owners need to know cash numbers every Monday morning, but accountants are too busy typing data to prepare graphs.
+            </p>
+            <div class="mt-4 p-3 bg-white/80 rounded-lg text-xs text-slate-800">
+              🤖 <strong>What the bot does:</strong> Automatically generates clean, simple PDF summaries and emails them to leadership on schedule.
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-[#0E1117] text-white p-8 rounded-[1.25rem] border-2 border-[#E22D39] flex flex-col justify-between shadow-xl">
+          <div>
+            <div class="text-xs font-mono font-bold text-[#FF4D5A] mb-2">08 · DATA CLEANUP</div>
+            <h3 class="text-2xl font-extrabold text-white">Fixing Messy Spreadsheets</h3>
+            <p class="text-sm text-slate-300 mt-3 leading-relaxed">
+              Moving data between an old system and a new system or fixing corrupted Excel sheets by hand takes forever and causes tears.
+            </p>
+            <div class="mt-4 p-3 bg-[#171B24] rounded-lg text-xs text-[#FF6B76] border border-[#E22D39]/30">
+              🤖 <strong>What the bot does:</strong> Cleans thousands of messy rows, strips bad formatting, and moves numbers safely between systems.
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 text-center bg-[#0E1117]">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-extrabold text-white">Ready to free up your team?</h2>
+      <p class="mt-3 text-slate-300">Tell us one chore. We will show you how a bot can run it for free.</p>
+      <div class="mt-6 flex justify-center gap-4">
+        <button data-open-demo-modal class="btn-primary py-3.5 px-8">Book a Free Workflow Review</button>
+        <a href="index.html" class="btn-secondary py-3.5 px-8">Back to Home</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Floating WhatsApp Quick-Chat Widget -->
+  <a href="https://wa.me/263770000000?text=Hi%20Farai,%20I'm%20looking%20at%20Spadeworks%20and%20want%20to%20automate%20a%20finance%20task" target="_blank" rel="noopener noreferrer" class="floating-whatsapp group" title="Chat with Farai on WhatsApp">
+    <div class="whatsapp-icon-circle">
+      <svg class="w-5 h-5 text-white fill-current" viewBox="0 0 24 24">
+        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+      </svg>
+    </div>
+    <div class="flex flex-col text-left">
+      <span class="text-[10px] text-emerald-400 font-mono font-bold leading-tight">● Online Now</span>
+      <span class="text-xs font-bold text-white group-hover:text-emerald-300 transition-colors">Chat with Farai</span>
+    </div>
+  </a>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

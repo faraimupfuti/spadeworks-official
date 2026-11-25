@@ -1,0 +1,382 @@
+/* ===================================================================
+   Spadeworks Automation - Modern Corporate Finance Stylesheet
+   Theme: Pitch Deck Palette (Matte Charcoal, Coral Red, Cream & White)
+   "Faster. Cheaper. Sharper. Yours."
+   =================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg-primary: #0e1117;
+  --bg-secondary: #151922;
+  --bg-surface: #1d222e;
+  --bg-card: rgba(21, 25, 34, 0.85);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-red: rgba(226, 45, 57, 0.35);
+  --accent-red: #e22d39;
+  --accent-red-hover: #c9202c;
+  --accent-red-light: rgba(226, 45, 57, 0.12);
+  --accent-whatsapp: #25d366;
+  --cream-bg: #f7f5f0;
+  --cream-text: #1a1a1a;
+  --text-main: #ffffff;
+  --text-muted: #9ca3af;
+  --text-subtle: #6b7280;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Background Grids & Ambient Red Glows */
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+.ambient-glow-red {
+  position: absolute;
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, rgba(226, 45, 57, 0.16) 0%, rgba(226, 45, 57, 0) 70%);
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.ambient-glow-cream {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(247, 245, 240, 0.06) 0%, rgba(247, 245, 240, 0) 70%);
+  filter: blur(90px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Glass & Card Panels */
+.glass-panel {
+  background: rgba(21, 25, 34, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel:hover {
+  border-color: rgba(226, 45, 57, 0.35);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.6), 0 0 25px rgba(226, 45, 57, 0.12);
+}
+
+.glass-card-interactive {
+  background: rgba(21, 25, 34, 0.7);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.glass-card-interactive:hover {
+  transform: translateY(-4px);
+  border-color: rgba(226, 45, 57, 0.5);
+  box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.6), 0 0 25px rgba(226, 45, 57, 0.15);
+}
+
+/* Cream-themed highlight cards (from pitch deck style) */
+.cream-card {
+  background: #f7f5f0;
+  color: #111418;
+  border-radius: 1.25rem;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+/* Badges & Pills */
+.pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.95rem;
+  border-radius: 9999px;
+  background: rgba(226, 45, 57, 0.12);
+  border: 1px solid rgba(226, 45, 57, 0.3);
+  color: #ff6b76;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+}
+
+.pill-badge-green {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  background: rgba(37, 211, 102, 0.12);
+  border: 1px solid rgba(37, 211, 102, 0.3);
+  color: #25d366;
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+/* Buttons */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: var(--accent-red);
+  color: #ffffff;
+  font-weight: 700;
+  padding: 0.85rem 1.75rem;
+  border-radius: 0.65rem;
+  box-shadow: 0 4px 18px rgba(226, 45, 57, 0.4);
+  transition: all 0.25s ease;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.btn-primary:hover {
+  background: var(--accent-red-hover);
+  box-shadow: 0 6px 24px rgba(226, 45, 57, 0.55);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.06);
+  color: #f3f4f6;
+  font-weight: 600;
+  padding: 0.85rem 1.75rem;
+  border-radius: 0.65rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  transition: all 0.25s ease;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: #25d366;
+  color: #ffffff;
+  font-weight: 700;
+  padding: 0.85rem 1.75rem;
+  border-radius: 0.65rem;
+  box-shadow: 0 4px 18px rgba(37, 211, 102, 0.4);
+  transition: all 0.25s ease;
+}
+
+.btn-whatsapp:hover {
+  background: #20ba5a;
+  box-shadow: 0 6px 24px rgba(37, 211, 102, 0.55);
+  transform: translateY(-2px);
+}
+
+/* Floating WhatsApp Quick-Chat Widget */
+.floating-whatsapp {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #151922;
+  border: 1px solid rgba(37, 211, 102, 0.4);
+  padding: 8px 16px 8px 10px;
+  border-radius: 9999px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(37, 211, 102, 0.2);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+}
+
+.floating-whatsapp:hover {
+  transform: translateY(-3px) scale(1.02);
+  border-color: #25d366;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.7), 0 0 25px rgba(37, 211, 102, 0.35);
+}
+
+.whatsapp-icon-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #25d366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(37, 211, 102, 0.5);
+}
+
+/* Zero-Risk Guarantee Seal */
+.guarantee-box {
+  background: linear-gradient(135deg, rgba(226, 45, 57, 0.12) 0%, rgba(21, 25, 34, 0.9) 100%);
+  border: 2px solid rgba(226, 45, 57, 0.4);
+  border-radius: 1.25rem;
+}
+
+/* Range Slider */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 8px;
+  background: #252b38;
+  border-radius: 9999px;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #e22d39;
+  cursor: pointer;
+  box-shadow: 0 0 12px rgba(226, 45, 57, 0.7);
+  border: 2.5px solid #ffffff;
+  transition: transform 0.15s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+}
+
+/* Pulse animation */
+@keyframes pulse-red {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1.4); opacity: 0; }
+  100% { transform: scale(0.95); opacity: 0; }
+}
+
+.pulse-indicator-red {
+  position: relative;
+}
+
+.pulse-indicator-red::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  border-radius: 50%;
+  border: 2px solid #e22d39;
+  animation: pulse-red 2s infinite;
+}
+
+/* Accordion */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0, 1, 0, 1);
+}
+
+.faq-item.open .faq-answer {
+  max-height: 500px;
+  transition: max-height 0.4s ease-in-out;
+}
+
+.faq-item.open .faq-icon {
+  transform: rotate(180deg);
+}
+
+/* Toast */
+#toast-container {
+  position: fixed;
+  bottom: 84px;
+  right: 24px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  pointer-events: none;
+}
+
+.toast {
+  pointer-events: auto;
+  background: #151922;
+  border: 1px solid rgba(226, 45, 57, 0.4);
+  color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6), 0 0 15px rgba(226, 45, 57, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  animation: slideInRight 0.3s ease forwards;
+  font-size: 0.9rem;
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; transform: translateY(10px); }
+}
+
+/* Modal styling */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(10, 12, 16, 0.88);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+  padding: 1rem;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-content {
+  background: #151922;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 1.25rem;
+  width: 100%;
+  max-width: 620px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.8), 0 0 40px rgba(226, 45, 57, 0.15);
+  transform: scale(0.95);
+  transition: transform 0.25s ease;
+}
+
+.modal-overlay.active .modal-content {
+  transform: scale(1);
+}
